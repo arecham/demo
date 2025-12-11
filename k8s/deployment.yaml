@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-webapp
+  namespace: cicd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-webapp
+  template:
+    metadata:
+      labels:
+        app: my-webapp
+    spec:
+      containers:
+        - name: my-webapp          # ← 8 espaces
+          image: nkp-registry.equipement.gov.ma/dev_mee/nginx:latest
+          ports:
+            - containerPort: 80    # ← 10 espaces
