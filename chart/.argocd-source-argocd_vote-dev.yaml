@@ -1,8 +1,0 @@
-helm:
-  parameters:
-  - name: vote.image.repository
-    value: quay.io/arecham/my-app
-    forcestring: true
-  - name: vote.image.tag
-    value: bc29533d5700e084537a28d884567dce2f3ee126
-    forcestring: true
